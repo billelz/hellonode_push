@@ -2,7 +2,7 @@ podTemplate(yaml: '''
 kind: Pod
 metadata:
   name: kaniko
-  namespace: samir
+  namespace: mohamedbilelzemmel
 spec:
   containers:
   - name: kaniko
@@ -16,7 +16,7 @@ spec:
     tty: true
 '''){
   node(POD_LABEL) {
-    def IMAGE_PUSH_DESTINATION="samirathorizon/hellonode"
+    def IMAGE_PUSH_DESTINATION="billelz/hellonode"
     stage('Build with Kaniko') {
         checkout scm
       
